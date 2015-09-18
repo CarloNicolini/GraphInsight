@@ -1,0 +1,317 @@
+GraphInsight
+
+SOFTWARE LICENSE AGREEMENT
+
+Dated January 1, 2012.
+
+This Software License Agreement is a legal agreement ("Agreement") between you ("You" or
+"Licensee", either an individual or a single entity), and the software authors, namely Michele
+Dallachiesa and Carlo Nicolini ("Licensors" or "Authors"). By downloading, installing, or using the
+GraphInsight software (together with its accompanying documentation, collectively "Software"), you
+indicate that you read and accept the provisions of this Agreement and that you agree to be bound by
+all terms and conditions set forth herein.
+The Licensors are only willing to enter with you in this Agreement and grant you this Software License
+if you obtained the Software from the Licensors or an authorized reseller. If you obtained the Software
+from any other source you may not install or use the Software.
+IF YOU DO NOT AGREE TO ANY OF THE TERMS OF THIS AGREEMENT, DO NOT INSTALL
+OR USE THIS SOFTWARE.
+
+1. Ownership
+
+The Software is licensed to you, not sold, notwithstanding any reference herein to "sale" and
+"purchase". The Software and all copies thereof are proprietary to the Licensors and title thereto
+remains their property, at all times. You agree that the Software contains proprietary information,
+including trade secrets, know-how and confidential information (the "Confidential/ Proprietary
+Information"). The Software is protected by international copyright laws, the copyright laws of Italy,
+and other intellectual property rights. All rights in and to the Software not expressly granted herein are
+reserved by the Licensors. There are no implied licenses under this Agreement.
+If the License for the Software is purchased by you with any intent to breach the Licensors’ Intellectual
+Property Rights, especially with the intent to reverse engineer, decompile, unauthorized transfer
+Proprietary Information, to include any exposed methods or source code where provided, no licensed
+right of use shall exist, and any products created as a result shall be judged illegal by definition of all
+applicable law. Any sale or resale of Proprietary Information or created derivatives so obtained will be
+prosecuted to the fullest extent of all local, federal, and international law. Violators will be prosecuted
+to the maximum extent possible.
+The Licensors have full power and authority to grant the Licensee the rights granted herein. The
+Licensors warrant that the performance of the terms herein and of the Licensors' duties to the Licensee
+hereunder will not breach any separate agreement or arrangement by which the Licensors are bound.
+The Licensors warrant that the Software delivered to the Licensee hereunder do not violate or infringe
+any patent, copyright, trade secret or other proprietary right of any third party, and that the Licensors
+are not aware of any facts upon which such a claim for infringement could be based.
+Non-proprietary supporting software and/or resources provided to Customer in connection with the
+Software are licensed or sublicensed to you pursuant to the terms and conditions of the applicable
+license(s) provided with same.
+
+2. License Grant
+
+2.1 Rights and Limitations
+
+The following rights and restrictions apply to all Licenses for the Software granted to you under this
+Agreement:
+(a) You may not sell, rent, loan, or otherwise encumber or transfer the Software in whole or in part, to a
+third party.
+(b) The Software may include certain files intended for distribution by you to the users of the software
+applications that you create. You may not distribute any files, except those that the Licensors have
+expressly designated as Redistributable. Developer Guide of Software (if any) or any other documents
+(such as API doc) which are intended to teach you how to use the Software, and sample code are not
+considered Redistributable(s).
+(c) You are entitled to deliver Redistributables as part of your own software applications if and only if
+the Redistributables have been protected by obfuscation via an obfuscator prior to distribution.
+Minimum requirement on the obfuscation process is that all essential class, method, and field names of
+the classes contained in the Software Redistributables are obfuscated. With the obfuscation it shall no
+longer be possible to use the functionality of the Redistributables via their public API. The obfuscation
+of the Redistributables may be performed by any obfuscator fulfilling the minimum requirement as
+defined above.
+(d) Your own software applications may not expose the functionality provided by the Software in a
+way that enables a third party to use these applications as a complete or partial replacement of the
+Software. This especially means that your applications may not expose an API to your customers that
+will allow them to access functionality provided by the Software. Redistributables may only be
+distributed with and for the sole purpose of executing applications permitted under this Agreement and
+which you have created using the Software.
+(e) You may not remove, alter, or obscure any confidentiality or proprietary notices (including
+copyright and trademark notices) of the Licensors or their suppliers on, in, or displayed by the
+Software.
+(f) You may not reproduce or use the Software except as expressly authorized under this Section 2.
+
+2.2 Binary License
+
+The Binary License for the Software grants you the right to use the Software, and to develop software
+applications using the Software.
+You are not allowed to reverse engineer, decompile, or otherwise attempt to derive the source code of
+the Software, create derivative works, modify, translate, or disassemble the Software, unless and only
+to the extent that such activity is expressly permitted by applicable law or by this Agreement.
+
+2.2.1 Evaluation License
+
+If you received the Software on an evaluation basis ("Evaluation License"), then the evaluation version
+of the Software is licensed to you for evaluation purposes only. The Evaluation License is a Binary
+License. The evaluation period is up to thirty (30) days from the date of installation or such shorter
+time period as set forth on the Software's packaging, license certificate, or accompanying
+documentation. During the evaluation period the Licensors grant you a personal, non-transferable,
+non-exclusive limited license to install and execute the Software for your personal internal use.
+Upon completion of the evaluation period all copies of the Software and all data derived from the
+Software have to be completely deleted unless you acquire a regular license for the Software. If you
+desire to continue to use the Software following the evaluation period, you should contact the
+Licensors or an Licensors' authorized reseller to order a regular license to use the Software.
+
+2.2.2 Single Developer License
+
+A Single Developer License is a binary, non-exclusive, perpetual, royalty free license for the Software.
+The License is valid for one (1) individual developer who has to be specified in the License Order. The
+Single Developer License grants the individual developer the right to install and use multiple copies of
+the Software. Each individual developer with access to the Software needs a Single Developer License
+for the Software of his own. The Single Developer License cannot be shared or used concurrently by
+more than one individual developer. The Single Developer License is NOT a 'floating' license, that is,
+you cannot temporarily transfer access rights to another user. You may not transfer the Single
+Developer License to another developer except for the named developer is leaving the company or the
+team that is using the Software. Licensors has to be notified in writing and provided with the name of
+the new-assigned individual developer.
+
+2.2.3 Project License
+
+A Project License is a binary, non-exclusive, perpetual, royalty free license for the Software within one
+named application ("Authorized Application" or "Authorized Project"). The Authorized Application
+has to be specified in the License Order. The Project License covers new versions and different
+editions of the Authorized Application as long as they are in the evolutionary line of it.
+The Project License grants you the right to use the Software concurrently by up to three (3) individual
+developers participating in the Authorized Project. For an additional License fee additional developer
+seats may be added to a Project License at any time. A Project License also allows you to use the
+Software as part of an automated build process for the Authorized Project.
+In case the Authorized Project changes its name, the Licensors have to be notified in writing if the
+Project License shall cover the new-named application. In such cases, the Licensors reserves the right
+to ask for a technical description that allows the Licensors to verify that the newly named Authorized
+Project is a continuation of the Authorized Project.
+
+2.2.4 Site License
+
+A Site License is a binary, non-exclusive, perpetual, royalty free license for the Software that is valid
+for one authorized site. The authorized site must be a specific place of business of Licensee that is
+defined by its mail address and has to be specified in the License Order. If projects that are hosted at
+different or multiple sites need to access the Software, each such site requires a separate License for the
+Software. A Site License grants you the right to share or use the Software concurrently by multiple
+individual developers at the authorized site. Furthermore, it can be used with multiple projects hosted
+at this site.
+
+2.3 Source Code License
+
+A Source Code License is available as Site or Project License with the additional right to use and
+modify the source code of the Software.
+The Licensors shall retain all right, title, and interest in and to all updates, modifications, enhancements
+and derivative works, in whole or in part, of the Software source code created by you, including all
+copyrights subsisting therein, to the extent such modifications, enhancements or derivative works
+contain copyrightable code or expression derived from the Software source code.
+You may not distribute, disclose, or otherwise make available the Software source code, or any portion
+thereof, or any modified version or derivative work thereof to any third party without the express prior
+written consent of the Licensors.
+Under no circumstances may the source code be used in whole or in part as the basis for creating a
+product that provides the same, or substantially the same, functionality as the Software.
+
+2.4 Academic License
+
+If the Software is labeled or provided to you as "Academic License", the following restrictions to the
+license definitions 2.1-2.3 apply: An Academic License restricts the use of the Software to non-
+commercial purposes (research, teaching, university projects, courses and application development).
+Any software application developed under an Academic License may not be licensed in whole or in
+part, to a third party being a commercial institution or a party that commercially uses the Software.
+Hereby, commercial institution is defined to be any company or organization with profit interest,
+commercial use is defined as any use within a commercial institution, any use with profit interest or
+any use within a cooperation of two or more parties with at least one party having a profit interest.
+
+2.5 Subscription
+
+The Licensors are not obliged to provide Software maintenance or support services to you unless you
+own a current Software maintenance and support service package ("Subscription"). You can enter into
+a Subscription along with the purchase of the Software License ("Corresponding License").
+Subscription is rendered for an initial term of twelve (12) months from effective date ("Term"),
+provided that there is no renewal of the Subscription. Effective date of the Subscription is the invoice
+date of the Corresponding License.
+Subscription includes (i) all versions and upgrades of the Corresponding License released during the
+Term, (ii) email based technical support for the Corresponding License and access to online support
+material during the Term, and (iii) in case of a Subscription renewal for another year, the right to renew
+your Subscription at expiration date for just a renewal fee.
+The Licensors maintain qualified personnel to provide timely and knowledgeable support service.
+The Licensors will only support the most current maintenance release of major versions of the
+Software. Six (6) months after the release of a new major version, the Licensors will stop maintaining
+and supporting an older major version of the Software.
+The Licensors provide Subscription Customer with bug fixes or workarounds in case of Software bugs.
+As a Subscription Customer, you agree to provide the Licensors with such information as the Licensors
+may reasonably require for fulfilling its support services. A bug report must be accompanied by a self-
+contained source code sample, that lets the Licensors easily reproduce the problem. With respect to
+third party software support, the sole responsibility of the Licensors is to pass through to you any
+warranties extended by the third-party.
+The Licensors may cancel any Subscription renewal order received at the end of the initial term for any
+reason, including but not limited to circumstances where the Software has become obsolete or has been
+modified.
+
+2.6 Deliverables
+
+The Licensors shall provide you with the electronic documentation and with the licensed Software
+(Internet delivery). The Software shall be deemed accepted after a period of fifteen (15) days following
+delivery of the Software.
+
+2.7 Upgrade Eligibility
+
+As Licensee of the Software you are eligible to receive cost free upgrades in case they belong to the
+generation of the Software you have licensed. The generation of the Software is recognizable by the
+leading two numbers of the Software version number string (for example Software version 5.0.1 is of
+generation 5.0). Free trial licenses are not eligible for free upgrading. Upgrades to the next generation
+are available for an upgrade price.
+
+2.8 Backups
+
+You may make a reasonable number of backup copies of the Software during the term of this
+Agreement as long as you do not use such backup copies for any purpose other than to replace the
+original copy of the Software provided to you by the Licensors if such copy is damaged or destroyed.
+
+3. Services
+
+There are no services provided under this Agreement. You are responsible for installing the Software
+on your computers as permitted under this Agreement. Support, maintenance and other services must
+be purchased separately.
+
+4. Disclaimer
+
+THE SOFTWARE IS PROVIDED "AS IS" AND TO THE MAXIMUM EXTENT PERMITTED BY
+LAW WITHOUT WARRANTY OF ANY KIND. There is no warranty that the product will be error-
+free or will function without interruption.
+The Licensors warrant however that the Licensed Software will be free from material errors and will
+operate substantially in accordance with the related documentation for a period of six months.
+Licensee's sole remedy and Licensor's sole and exclusive liability for the breach of this warranty shall
+be repair or replacement of the Licensed Software within thirty (30) days from being notified of such
+breach, or, if the Licensor deems such repair or replacement impossible within the foregoing thirty (30)
+days, refund fees previously paid to Licensor by Licensee for the previous six months period.
+The Licensors make no other warranties, either Express or Implied, regarding the Software, including
+but not limited to its merchantability or its fitness for any particular purpose. Licensee takes note of the
+fact that the Software is neither developed nor intended for high risk activities such as in the operation
+of nuclear facilities, aircraft navigation, traffic control, direct life support machines, or weapon
+systems, in which the failure of the Software could lead directly to death, personal injury, or severe
+physical or environmental damage. Any liability therefore is excluded.
+The Licensors provide no warranty to third parties receiving your software applications, and you will
+remain solely responsible towards recipients of your software applications for support, service,
+upgrades, or technical or other assistance, and such recipients of your software applications are not
+entitled to such services or assistance through the Licensors.
+The Licensors agree to pass through any warranties extended for third-party software, if any,
+incorporated into the Software.
+
+5. Limitation of Liability
+
+TO THE MAXIMUM EXTENT PERMITTED BY LAW, ANY LIABILITY IS EXCLUDED. In no
+event will the Licensors be liable to any party for any indirect, incidental, consequential, exemplary,
+special or punitive damages, including any loss of profit, revenue, business opportunity or data, arising
+from or relating to this Agreement or the Software, whether in contract, in tort or otherwise, even if the
+Licensors knew, should have known or has been advised of the possibility of such damages. The
+Licensors will not support or have any liability for use of reformatted and recombined Redistributables.
+The Licensors' total cumulative liability arising from or related to this Agreement or the Software will
+not exceed the fees actually paid by you under this Agreement.
+
+6. Overdue Payment
+
+If you are more than 30 working days in delay with a due payment the Licensors shall be entitled to
+require the temporary deletion of all instances of the Software until payment has been made. The
+Licensors shall not be obliged to declare cancellation of the contract prior to that demand.
+
+7. Privacy
+
+You agree that - in conjunction with the business you have been doing with the Licensors and in
+accordance with the law - your company and personal data will be saved and processed in the database
+of the Licensors. We may use your email address or phone number to communicate with you, for
+example to provide your order status, to respond to queries, to notify you of a new release of the
+product you purchased or to remind you of the expiry of a service agreement with us.
+If not expressly disagreed on your License Order, the Licensors shall be entitled to name you as a
+reference customer.
+
+8. General
+
+8.1 Applicable Law and Court of Jurisdiction
+
+This Agreement is made and shall be construed in accordance with the laws of Italy. Court of
+Jurisdiction is Trento, Italy.
+The Licensors also reserve the right to start legal action at the court of jurisdiction at your legal
+business domicile or place of residence. The parties agree that the United Nations Convention for the
+International Sale of Goods shall not apply in any way to this Agreement and the services contemplated
+herein.
+
+8.2 Waiver
+
+Waiver of any breach or failure to enforce any Section of this Agreement shall not be deemed a waiver
+of any breach or right to enforce which may thereafter occur.
+
+8.3 Assignments
+
+You may not assign or transfer, by operation of law or otherwise, any of your rights under this
+Agreement (including your licenses with respect to the Software) to any third party without the prior
+written consent of the Licensors, and any attempted assignment without such written consent shall be
+null and void. You expressly agree that the Licensors may assign their rights to any third party any
+time. In case of an assignment you are entitled to terminate this Agreement. In the event of any such
+termination, you will not be entitled to any refund of the fees paid by you hereunder. Irrespective of the
+aforesaid, the Licensors may delegate its obligations under this Agreement without restrictions.
+
+8.4 Remedies, Term and Termination
+
+Except if otherwise provided herein, the parties' rights and remedies under this Agreement are
+cumulative.
+You acknowledge that the Software contains valuable trade secrets and proprietary information of the
+Licensors and their suppliers, and that any actual or threatened breach of this Agreement by you will
+constitute immediate, irreparable harm for which monetary damages might be an inadequate remedy,
+and that injunctive relief is necessary for such breach. Your rights under this Agreement will terminate
+immediately without notice from the Licensors if you materially breach it. Upon this termination, you
+will cease use of, and destroy, the Software and confirm compliance in writing to the Licensors. All
+sections of this Agreement which by nature should survive, will survive termination of the Agreement,
+including, but not limited to, payment terms, warranty disclaimers, and limitations of liability.
+Termination is not an exclusive remedy and all other remedies will be available whether or not the
+License is terminated.
+If any legal action is brought to enforce this Agreement, the prevailing party will be entitled to receive
+its attorneys' fees, court costs, and other collection expenses, in addition to any other relief it may
+receive.
+
+8.5 Modifications or Extensions
+
+All modifications or extensions to this Software License Agreement need to be in writing and signed
+by both parties.
+
+8.6 Construction Clause
+
+If for any reason a court of competent jurisdiction finds any provision of this Agreement, or portion
+thereof, to be unenforceable, that provision of the Agreement will be enforced to the maximum extent
+permissible so as to affect the intent of the parties, and the remainder of this Agreement will continue
+in full force and effect.

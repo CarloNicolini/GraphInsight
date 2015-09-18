@@ -1,0 +1,2 @@
+/usr/bin/ar cr ../../build/libCommon.a  CMakeFiles/Common.dir/Arcball.cpp.o CMakeFiles/Common.dir/Common.cpp.o CMakeFiles/Common.dir/Statistic.cpp.o CMakeFiles/Common.dir/Timer.cpp.o
+/usr/bin/ranlib ../../build/libCommon.a

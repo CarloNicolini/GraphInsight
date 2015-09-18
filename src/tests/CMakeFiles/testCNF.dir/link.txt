@@ -1,0 +1,1 @@
+/usr/bin/c++    -fPIC -fopenmp -O2 -g -O3 -pipe -msse3 -fomit-frame-pointer -funroll-loops      CMakeFiles/testCNF.dir/testCNF.cpp.o  -o ../../build/testCNF -rdynamic ../../build/libCommon.a ../../build/libGraphLayout.a ../../build/libCommon.a 

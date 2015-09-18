@@ -1,0 +1,28 @@
+<RCC>
+    <qresource prefix="/">
+        <file>images/logo.png</file>
+        <file>icons/Pause-Disabled-icon.png</file>
+        <file>icons/Pause-Normal-icon.png</file>
+        <file>icons/Pause-Pressed-icon.png</file>
+        <file>icons/Play-Disabled-icon.png</file>
+        <file>icons/Play-Normal-icon.png</file>
+        <file>icons/Play-Pressed-icon.png</file>
+        <file>icons/start.png</file>
+        <file>icons/stop.png</file>
+        <file>icons/logo2.png</file>
+        <file>images/screenshot1.png</file>
+        <file>images/screenshot2.png</file>
+        <file>images/screenshot3.png</file>
+        <file>images/screenshot4.png</file>
+        <file>images/screenshot5.png</file>
+        <file>images/screenshot6.png</file>
+        <file>icons/logoSmall.png</file>
+        <file>images/screenshot7.png</file>
+        <file>images/screenshot9.png</file>
+        <file>images/screenshot10.png</file>
+        <file>images/screenshot11.png</file>
+        <file>images/screenshot12.png</file>
+        <file>icons/logo.icns</file>
+        <file>icons/logo2.icns</file>
+    </qresource>
+</RCC>

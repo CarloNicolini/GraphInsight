@@ -1,0 +1,298 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=utf-8">
+	<TITLE></TITLE>
+	<META NAME="GENERATOR" CONTENT="LibreOffice 3.5  (Linux)">
+	<META NAME="AUTHOR" CONTENT="carlo ">
+	<META NAME="CREATED" CONTENT="20130218;17163000">
+	<META NAME="CHANGEDBY" CONTENT="carlo ">
+	<META NAME="CHANGED" CONTENT="20130218;17180500">
+</HEAD>
+<BODY LANG="en-US" DIR="LTR">
+<P ALIGN=LEFT><FONT SIZE=4><B>GRAPHINSIGHT 1.3 API</B></FONT> 
+</P>
+<UL>
+	<LI><P ALIGN=LEFT>void setBatchMode(bool batchMode);
+</P>
+	<LI><P ALIGN=LEFT>void initEmpty();
+</P>
+	<LI><P ALIGN=LEFT>void openFile(const QString &amp;filename);
+</P>
+	<LI><P ALIGN=LEFT>void evalFile(const QString &amp;filename);
+</P>
+</UL>
+<P ALIGN=LEFT>// List of Methods callable from Graph class
+</P>
+<P ALIGN=LEFT>// Put the program in batch mode, it means that after
+every operation, the OpenGL status is not updated, this makes
+frequent operations such as node or edges insertion and removal much
+faster
+</P>
+<P ALIGN=LEFT>void setBatchMode(bool batchMode);
+</P>
+<P ALIGN=LEFT>
+</P>
+<P ALIGN=LEFT>// Initialize a new empty graph, set the all the visual
+attributes to their default status
+</P>
+<P ALIGN=LEFT>void initEmpty();
+</P>
+<P ALIGN=LEFT>
+</P>
+<P ALIGN=LEFT>// Open a graph file in .net or .dimacs format, it's
+equivalent to “Open File...”
+</P>
+<P ALIGN=LEFT>void openFile(const QString &amp;filename);
+</P>
+<P ALIGN=LEFT>
+</P>
+<P ALIGN=LEFT>// Evaluate a Python script in .py format, exceptions
+are thrown if something goes wrong
+</P>
+<P ALIGN=LEFT>void evalFile(const QString &amp;filename);
+</P>
+<P ALIGN=LEFT>
+</P>
+<P ALIGN=LEFT>// Add a textual attribute as new column to the current
+dataset
+</P>
+<P ALIGN=LEFT>void addAttribute(const QString &amp;attributeName);
+</P>
+<P ALIGN=LEFT>
+</P>
+<P ALIGN=LEFT>// Remove the selected attribute by name, if it is not
+present as column in the dataset, exception is thrown
+</P>
+<P ALIGN=LEFT>
+</P>
+<P ALIGN=LEFT>void removeAttribute(const QString &amp;attributeName);
+</P>
+<P ALIGN=LEFT>
+</P>
+<P ALIGN=LEFT>// Initialize a new layout for the current graph. The
+first parameters can be one of the 16 layout methods available as
+variables (LayoutMethodXXX). If the selected layout method index is
+out of range an exception is thrown. This method is also synchronized
+with the GUI selection of layout method, so changing via GUI or via
+this method is the same, except that this method can force the
+randomization of nodes coordinates
+</P>
+<P ALIGN=LEFT>void initLayout(int layoutMethod,int dimensions, bool
+randomize=false, bool shakeZ=false);
+</P>
+<P ALIGN=LEFT>
+</P>
+<P ALIGN=LEFT>// Do nsteps of the current layout method. While
+computing the “Graph Drawing” group box is disabled. You can stop
+the current layout only via console
+</P>
+<P ALIGN=LEFT>void steps(int nsteps);
+</P>
+<P ALIGN=LEFT>
+</P>
+<P ALIGN=LEFT>// Stop the current layout computation, reenable the
+Graph Drawing group box
+</P>
+<P ALIGN=LEFT>void stop();
+</P>
+<P ALIGN=LEFT>
+</P>
+<P ALIGN=LEFT>// Graph Methods
+</P>
+<P ALIGN=LEFT>// Insert a node in the current graph with a integer
+ID. If the node already exists an exception is thrown
+</P>
+<P ALIGN=LEFT>void insertNode(int nodeId);
+</P>
+<P ALIGN=LEFT>// Insert a node in the current graph with a list of
+string properties. They must be as much as the number of dataset
+attributes otherwise an exception is thrown to the user. If the node
+already exists an exception is thrown
+</P>
+<P ALIGN=LEFT>void insertNode(int nodeId, const QStringList
+&amp;nodeProperties);
+</P>
+<P ALIGN=LEFT>// Overloaded method to insert a node with given
+property if the number of dataset attributes is 1. If the node
+already exists an exception is thrown
+</P>
+<P ALIGN=LEFT>void insertNode(int nodeId, const QString
+&amp;nodeProperty);
+</P>
+<P ALIGN=LEFT>/
+</P>
+<P ALIGN=LEFT>// Remove the node with the selected ID. If the node is
+not found an exception is thrown. This is an expensive operation.
+</P>
+<P ALIGN=LEFT>void removeNode(int nodeId);
+</P>
+<P ALIGN=LEFT>
+</P>
+<P ALIGN=LEFT>// Insert an undirected edge in the graph. If the edge
+already exists and exception is thrown. If the source or target nodes
+don't exist an exception is thrown.
+</P>
+<P ALIGN=LEFT>
+</P>
+<P ALIGN=LEFT>void insertEdge(int source, int target, double
+weight=1.0);
+</P>
+<P ALIGN=LEFT>
+</P>
+<P ALIGN=LEFT>// Modify the weight of the undirected edge from
+“source” to “target” node. If the edge does not exist an
+exception is thrown
+</P>
+<P ALIGN=LEFT>void setEdgeWeight(int source, int target, double
+weight);
+</P>
+<P ALIGN=LEFT>
+</P>
+<P ALIGN=LEFT>// Modify an existing node property, if the node does
+not exist and exception is thrown
+</P>
+<P ALIGN=LEFT>void setNodeAttribute(int nodeId, const QStringList
+&amp;nodeAttributes);
+</P>
+<P ALIGN=LEFT>// Remove an edge. If the edge does not exist between
+“source” and “target” an exception is thrown. If “source”
+or “target” don't exist an exception is thrown.
+</P>
+<P ALIGN=LEFT>void removeEdge(int source, int target);
+</P>
+<P ALIGN=LEFT>
+</P>
+<P ALIGN=LEFT>// Return the number of nodes of current graph
+</P>
+<P ALIGN=LEFT>int getNodesCount() const;
+</P>
+<P ALIGN=LEFT>// Return the number of edges of graph
+</P>
+<P ALIGN=LEFT>int getEdgesCount() const ;
+</P>
+<P ALIGN=LEFT>// Return the number of weakly connected components of
+the graph
+</P>
+<P ALIGN=LEFT>int getComponentsCount() const;
+</P>
+<P ALIGN=LEFT>// Return a Python list of lists containing the node
+wrappers to the nodes in the connected components PyObject
+*getConnectedComponents();
+</P>
+<P ALIGN=LEFT>
+</P>
+<P ALIGN=LEFT>// Return a selected node. If the node doesn't exist an
+exception is thrown
+</P>
+<P ALIGN=LEFT>LNode *getNode(int nodeid);
+</P>
+<P ALIGN=LEFT>
+</P>
+<P ALIGN=LEFT>// Return the graph-theoretic distance between two
+nodes. If one of these nodes does not exist an exception is thrown
+</P>
+<P ALIGN=LEFT>double getNodesDistance(int fromNode, int toNode);
+</P>
+<P ALIGN=LEFT>
+</P>
+<P ALIGN=LEFT>// Return the weight of the edge from node  fromNodeId
+to  toNodeId
+</P>
+<P ALIGN=LEFT>double getEdgeWeight(int fromNodeId, int toNodeId);
+</P>
+<P ALIGN=LEFT>
+</P>
+<P ALIGN=LEFT>// Return a Python list of node wrappers along the
+shortest path between “fromNode” and “toNode”
+</P>
+<P ALIGN=LEFT>QList&lt;LNode *&gt; getShortestDistancePath(int
+fromNode, int toNode);
+</P>
+<P ALIGN=LEFT>
+</P>
+<P ALIGN=LEFT>// Synchronize python and C++ structures
+</P>
+<P ALIGN=LEFT>void sync();
+</P>
+<P ALIGN=LEFT>// return the python dictionary of nodes, nodes are
+indexed by their ID, so if you want to get the node with id = 100, do
+G.nodes()[100] or otherwise G.getNode(100)
+</P>
+<P ALIGN=LEFT>PyObject* nodes();
+</P>
+<P ALIGN=LEFT>
+</P>
+<P ALIGN=LEFT>
+</P>
+<P ALIGN=LEFT>// Methods callable from Node class
+</P>
+<P ALIGN=LEFT>// Get the node degree. If the weight of the edges
+incident to node is != 1 then getDegree() is different from
+getNumNeighbors()
+</P>
+<P ALIGN=LEFT>double getDegree() const;
+</P>
+<P ALIGN=LEFT>// Get the node weight
+</P>
+<P ALIGN=LEFT>double getWeight() const;
+</P>
+<P ALIGN=LEFT>// Get the connected component index of the node in the
+current graph
+</P>
+<P ALIGN=LEFT>int getComponent() const;
+</P>
+<P ALIGN=LEFT>// Get the node ID
+</P>
+<P ALIGN=LEFT>int getId() const;
+</P>
+<P ALIGN=LEFT>// Get the node index (not useful)
+</P>
+<P ALIGN=LEFT>int getIndex() const;
+</P>
+<P ALIGN=LEFT>// Get the node number of neighbors node
+</P>
+<P ALIGN=LEFT>unsigned int getNumNeighbors() const;
+</P>
+<P ALIGN=LEFT>// Get a Python dictionary of node neighbors,
+indexeable by their ID
+</P>
+<P ALIGN=LEFT>PyObject *neighbors();
+</P>
+<P ALIGN=LEFT>
+</P>
+<P ALIGN=LEFT>// Get the node X coordinate
+</P>
+<P ALIGN=LEFT>double getX() const;
+</P>
+<P ALIGN=LEFT>// Get the node Y coordinate
+</P>
+<P ALIGN=LEFT>double getY() const;
+</P>
+<P ALIGN=LEFT>// Get the node Z coordinate
+</P>
+<P ALIGN=LEFT>double getZ() const;
+</P>
+<P ALIGN=LEFT>
+</P>
+<P ALIGN=LEFT>// Get the list of id of current node neighbors as
+Python list of integers
+</P>
+<P ALIGN=LEFT>QList&lt;int&gt; getNeighborsId() const;
+</P>
+<P ALIGN=LEFT>// Move the current node by displacement dx,dy,dz
+</P>
+<P ALIGN=LEFT>void move(const double &amp;dx, const double &amp;dy,
+const double &amp;dz);
+</P>
+<P ALIGN=LEFT>// Set this node coordinates x,y,z
+</P>
+<P ALIGN=LEFT>void setPos(const double &amp;x, const double &amp;y,
+const double &amp;z);
+</P>
+<P ALIGN=LEFT>// Set this node color in RGB values. r,g,b must be
+values in [0,255], otherwise an exception is thrown
+</P>
+<P ALIGN=LEFT>void setColorRGB(int r,int g,int b);</P>
+</BODY>
+</HTML>

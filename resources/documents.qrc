@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/">
+        <file>docs/IDEE.html</file>
+        <file>docs/API.html</file>
+    </qresource>
+</RCC>

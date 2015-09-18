@@ -1,0 +1,121 @@
+BUGSLIST / FEATURES
+
+PRIORITA'
+
+:::::: ALTA :::::
+--> DA FIXARE <--
+* Djikstra non funziona con pesi dei lati negativi, deve automaticamente switchare a bellman-ford
+* HDE si pianta con grafi pesati con pesi negativi (problema algoritmo di Dijsktra...)
+* non carica data/Samples/longmult5-UP.cnf ! si blocca al 66% (baco in CNF::loadFromFile non becca il fine file dello stream)
+* disabilitare la selezione mentre si sposta
+* disabilitare UNDO nella shell
+
+* un po' lento quando finisce il thread degli steps a ridare il controllo alla gui...
+* le impostazioni del dimensionamento vengono ora correttamente
+salvata, ma la finestra non parte centrata, è sempre un pò alla cazzo.
+c'è un modo per dire al window manager "piazzala al centro"? altre
+app partono meglio che cosi' ci sarà un sistema.
+
+* FPS cannato
+========== Da fare ma ignorabili per ora ==========
+* se non ci sono colonne testuali nel file ma solo id, nascondi "Column" (era "Source")
+* BinaryStressML bacato con certi grafi
+* motivo per cui si sovrappongo i nodi con quadtree?
+* La chiamata a MainWindowDecorator::steps non aggiorna le statistiche
+* salvare il formato file aperto l'ultima volta
+===================================================
+
+--> FIXATI <--
+* finestra HTML API deve avere un sizing migliore, centrata sulla finestra, larga 2/3 (cancellata)
+* problema colorazione nodi quando si fanno azioni da shell e si parte layout (FIXATO)
+* non carica i pesi dei lati da dimacs (FIXATO)
+* inconsistenza quando si cerca di inserire un lato due volte con due pesi diversi controllare DataSet::loadPajek (FIXATO)
+* caricamento pesi dei lati da Pajek con il tag *Arcs (fixato)
+* File->Save mentre fa il layout resetta il layout
+* fixare Shell comportamento copia/incolla (FIXATO, si usa shift+ctrl+c per nuova riga)
+* fixare cambio illuminazione quando si seleziona nodo e si deseleziona (FIXATO)
+* marroncino sulla selezione (FIXATO)
+* fixare il copyright a 2013 (messo 10 settembre 2013)
+* mac fixare il Bundle Info.plist (si copia Info.plist giusto direttamente)
+* "include selected items and its neighbors" non funziona. (FIXATO)
+* in fondo a SX per nodi selezionati "Num Neighbors" => "Neighbors count" (FIXATO)
+* la griglia è praticamente invisibile, vedi img2 (FIXATO)
+* il nodo selezionato non'è rosso. tantomeno i neighbors, pur avendolo richiesto da "include selected item and neighbors".  questo è in qualche modo legato a quando si gioca con la visualizzazione dei label. il problema persiste anche dopo aver fatto reset, oppure dopo aver caricato un altro grafo (!). (FIXATO)
+* la schermata di About non'è aggiornata: (FIXATO)
+* aggiornare icona in About (FIXATO)
+* invece che:  "GraphInsight 1.3.0-Alpha\nPro\nRev 0" usare "GraphInsight 1.3.0" (dove 0 è il numero di revisione)
+* ed eliminare i \n\n\n, lasciare solo i \n\n nelle righe successive in about
+* eliminare menu contestuale properties
+* quando si attiva la shell Python, dare il focus alla shell Python (FIXATO)
+* in tab Database "Search" Mettere tooltip "Regular expression" per chiarire.
+* in menu contestuale nodi, eliminare "Properties".
+* se tira indietro con CTRL prima dell commandPrompt e scrivi crash
+* salvataggio dimensioni splitter non funzionante (FIXATO)
+* sul grafo all'avvio, c'è Custom RGB sugli archi e non sui nodi. Il comportamento corretto è questo: se l'utente non ha impostato
+alcuna colorazione custom, l'opzione viene disabilitata e non rimossa. Esattamente come facciamo con le tecniche di layout.
+* quando seleziono un nodo a SX (dalla lista dei match) la prima selezione viene ignorata. se seguenti selezioni invece vengono correttalmente gestite, selezionando il nodo corrispondente a DX.
+* nascondere tab case sensitive
+* in console python, invio su riga vuota produce errori "SyntaxError: unexpected EOF while parsing" mentre non dovrebbe produrre nulla
+* archi sono marroncini e non arancioni. a parte il bug che ho già segnalato, riguardo l'erronea colorazione del nodo selezionato e dei suoi neighbors.
+* il testo in fondo a SX dice che il degree del nodo selezionato è "6". da Nodes ho selezionato lo slider su degree >= 35, quindi non dovrebbe visualizzare il nodo. (FIXATO)
+* layout show column cannato su OSX (fixato)
+* dimensioni dei lati spuppano a volte (FIXATO limitando il raggio dei lati)
+* CTRL+L cancella la linea corrente (FIXATO)
+* debug.net è 2 nodi connessi da 1 arco. eseguendo il layout l'arco scompare.
+* il copy&paste è buggato: il paste non'è fatto alla posizione del cursore ma a fine riga (FIXATO)
+* il fontsize di default 1 è troppo piccolo, non si riescono a distinguere chiaramente i caratteri. usiamo 5 di default.
+* quando non'è stato settato nessun custom color, non dovrebbe essere possibile selezionare custom color. (FIXATO)
+* Fixare il copia incolla di una sola riga nella shell, ora non funziona correttamente (FIXATO completamente)
+* Aggiungere proprietà del nodo addAttribute, removeAttribute(Proprietà sono modificabili)
+* con ctrl-L, ristampa il testo di benvenuto. Inoltre, quando carichi la shell python, possiamo eseguire uno script init.py ? cosi' carichiamo facilmente qualche utility ecc.
+* ho provato la setNodeAttribute, ma non sono riuscito a capire come funziona. Io voglio cambiare il label. Illuminami.
+* quando si avvia una tecnica di layout, randomizzare la soluzione _se_ la tecnica non'è la stessa usata per generare il precedente layout.
+* lo slider che visualizza solo la barra non visualizza alcuna barra nella finestra OpenGL.Se non risolvi il problema, meglio tornare a prima che funzionava bene, come tralresto ancora funziona (senza questo difetto) lo slider orizzontale.
+* ctrl-L non elimina il contenuto della riga di shell che si sta scrivendo, contrariamente a quanto accade in console. penso sia banale fixare, ?.
+* G.help() fa crashare il programma. vedi crash report allegato.
+* Fixare copia incolla comandi console (FIXATO)
+* Manca ICONA su mac michele (FIXATO)
+* - la selezione dei nodi ha dei problemi, a volte il nodo non'è colorato di rosso. (non riesco a riprodurre)
+* probabilmente impostare setSamples(4); in GLWIdget
+* hai tolto l'effetto "zoom-in" allo startup? (NO, FIXATO!)
+* quando il radius dei nodi è zero, non posso incrementare libramente il radius degli archi. (FIXATO)
+* crash su windows7 con scheda grafica intel (FIXATO)
+* se si apre grafo poi si annulla resta tutto disattivato poi non si sa come riattivarlo... (FIXATO mettendo un grafo di default)
+* permettere i metodi di layout ok anche da shell (FIXATO)
+* fixare logica degli stati 2D-3D (FIXATO)
+* togliere connect da GUI quando switcha 2D-3D
+* Prima vista su dataset (FIXATO)
+* crash KK e StressMaj con lati negativi (FIXATO)
+* qualche overlap dei nodi (succede quando selezioni il nodo ed i suoi vicini, quelli vengono disegnati sopra)
+* ACE bacato (FIXATO)
+* Caricare un grafo di base anzichè empty (FIXATO, carica netscience)
+* Al caricamento se il grafo ha grado max più alto si vedono tutte le etichette (FIXATO)
+* Binary stress bacato (FIXATO)
+* non resetta la vista da 3D a 2D ortho se si switchano la dimensione via console (forse fixato)
+* colorazione grigia sia day che night (FIXATO)
+* Load nuovo grafo mentre fa la steps crasha (FIXATO)
+* salta fuori la griglia quando seleziono un nodo (FIXATO, è un problema di nebbia)
+* Correggere grado statsMaxNodeDegree e statsMinNodeDegree (CORRETTO Mantenendo iterazione lineare ad ogni esecuzione di comando da shell)
+* Kamada-Kawai crasha quando ci sono solo 2 nodi e nessun lato (FIXATO lavorando su GraphLayout::lmOK)
+* Salta fuori il label se il degree è 1 (probabilmente un <= da qualche parte) (FIXATO)
+* Rimettere lo splash screen
+* Quando si chiama initEmpty deve andare la qualità a 0 dei poligoni! e il raggio dei nodi = 1
+* quando si inseriscono i nodi non aggiorna le tecniche di layout possibili (FIXATO)
+* Aggiungere DOC e link alla doc per la shell
+
+:::::: MEDIA :::::
+* imposto i colori RGB ad un valore standard -1 se mai toccati (non so a cosa serva)
+
+:::::: BASSA E FEATURES AGGIUNTIVE:::::
+* profilare con OpenGL profiler, mettere multithread context
+* aggiungere un pulsante batch mode per eliminare il disegno ed accelerare il layout (non serve basta fare da shell python)
+* esportate SVG con coordinate pixel dei nodi ed esportare anche le etichette e tutto quanto
+* La funzione GraphLayout::updateStaticStats cambia solamente quando viene modificato il grafo (insertNode,removeNode, insertEdge,removeEdge) dovrebbe solo agire sul nodo
+con il grado massimo e minimo e modificare le variabili di conseguenza senza iterare su N nodi!! questione di performance
+
+* Aggiungere metodo di colorazione specifico per l'arco DA FARE
+
+* Azione su nodo fa degli scripts, aprire nuovo contesto python
+
+* Fare diff della 1.2 nelle librerie di layout rispetto alla 1.3
+* Dare un'occhiata a QCustomPlot e provare a vedere cosa wrappare

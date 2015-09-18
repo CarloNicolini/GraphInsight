@@ -1,0 +1,16 @@
+<RCC>
+    <qresource prefix="/">
+        <file>samples/longmult5-UP.net</file>
+        <file>samples/Comanche.net</file>
+        <file>samples/1CRN.net</file>
+        <file>samples/PhD.net</file>
+        <file>samples/ppa_capture.net</file>
+        <file>samples/wikipedia.net</file>
+        <file>samples/website.net</file>
+        <file>samples/disi-authors.net</file>
+        <file>python_scripts/testnodecreation.py</file>
+        <file>python_scripts/colordistance.py</file>
+        <file>samples/NetScience.net</file>
+        <file>python_scripts/init.py</file>
+    </qresource>
+</RCC>

@@ -1,0 +1,1 @@
+/usr/bin/c++    -fPIC -fopenmp -O2 -g -O3 -pipe -msse3 -fomit-frame-pointer -funroll-loops      CMakeFiles/testGetSaveFileName.dir/testGetSaveFileName.cpp.o  -o ../../../build/testGetSaveFileName -rdynamic -lQtOpenGL -lQtSvg -lQtGui -lQtXml -lQtCore 
