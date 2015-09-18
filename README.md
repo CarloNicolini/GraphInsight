@@ -39,10 +39,15 @@ Be sure that you have the following directories in your system Path:
 
 <code>
 	C:\Program Files (x86)\CMake 2.8\bin;
+
 	C:\QtSDK\Desktop\Qt\4.8.4\msvc2008\bin;
+
 	C:\QtSDK\Desktop\Qt\4.8.4\msvc2008\lib;
+
 	C:\QtSDK\Desktop\Qt\4.8.4\msvc2008\include;
+
 	C:\Program Files (x86)\Microsoft Visual Studio 9.0\Common7\IDE\;
+
 	C:\Program Files (x86)\7-Zip\;
 </code>
 
@@ -51,6 +56,7 @@ Open a command prompt and try to isse the following commands:
 "devenv" #This should open Visual Studio
 
 "cmake" # This should run cmake
+
 "7z" # this should run 7zip
 </code>
 
@@ -72,6 +78,7 @@ If you prefer to use cmake from command line, then you just have to change to th
 you've downloaded GraphInsight source code in C:\Users\username\Desktop\graphinsight_base_directory) and then:
 <code>
 	cd C:\Users\username\Desktop\graphinsight_base_directory
+
 	cmake -D CMAKE_BUILD_TYPE=Release -D LICENSE_TYPE=Pro .
 </code>
 
