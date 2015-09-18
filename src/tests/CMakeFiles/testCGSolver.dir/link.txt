@@ -1,1 +1,0 @@
-/usr/bin/c++    -fPIC -fopenmp -O2 -g -O3 -pipe -msse3 -fomit-frame-pointer -funroll-loops      CMakeFiles/testCGSolver.dir/testCGSolver.cpp.o  -o ../../build/testCGSolver -rdynamic ../../build/libGraphLayout.a ../../build/libCommon.a 

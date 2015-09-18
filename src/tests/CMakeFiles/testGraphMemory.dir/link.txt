@@ -1,1 +1,0 @@
-/usr/bin/c++    -fPIC -fopenmp -O2 -g -O3 -pipe -msse3 -fomit-frame-pointer -funroll-loops      CMakeFiles/testGraphMemory.dir/testGraphMemory.cpp.o  -o ../../build/testGraphMemory -rdynamic ../../build/libCommon.a ../../build/libGraphLayout.a ../../build/libCommon.a 

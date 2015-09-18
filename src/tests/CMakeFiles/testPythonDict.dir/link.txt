@@ -1,1 +1,0 @@
-/usr/bin/c++    -fPIC -fopenmp -O2 -g -O3 -pipe -msse3 -fomit-frame-pointer -funroll-loops      CMakeFiles/testPythonDict.dir/testPythonDict.cpp.o  -o ../../build/testPythonDict -rdynamic ../../build/libCommon.a ../../build/libPythonQt.a -lpython2.7 -lQtGui -lQtXml -lQtCore 

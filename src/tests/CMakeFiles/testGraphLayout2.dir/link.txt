@@ -1,1 +1,0 @@
-/usr/bin/c++    -fPIC -fopenmp -O2 -g -O3 -pipe -msse3 -fomit-frame-pointer -funroll-loops      CMakeFiles/testGraphLayout2.dir/testGraphLayout2.cpp.o  -o ../../build/testGraphLayout2 -rdynamic ../../build/libGraphLayout.a ../../build/libCommon.a 
