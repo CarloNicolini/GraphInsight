@@ -1,6 +1,5 @@
 set(GraphLayout_HDR 
 Cnf.h
-Community.h
 CGSolver.h
 LayoutOptions.h
 Circle.h
@@ -53,7 +52,6 @@ ForceDirectedMethod.h
 )
 
 set(GraphLayout_SRC
-Community.cpp
 LayoutOptions.cpp
 Cnf.cpp
 CGSolver.cpp

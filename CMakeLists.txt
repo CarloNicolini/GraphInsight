@@ -19,20 +19,7 @@ LIST(GET GRAPHINSIGHT_VERSION_LIST 1 GRAPHINSIGHT_MINOR)
 LIST(GET GRAPHINSIGHT_VERSION_LIST 2 GRAPHINSIGHT_PATCH)
 
 #LICENSE_TYPE can be one of these 3 Trial/Academic/Professional
-IF(LICENSE_TYPE MATCHES "Trial" OR LICENSE_TYPE MATCHES "Academic" OR LICENSE_TYPE MATCHES "Pro" )
-	message("==== Building GraphInsight ${GRAPHINSIGHT_VERSION} ${LICENSE_TYPE}====" )
-ELSE(LICENSE_TYPE MATCHES "Trial" OR LICENSE_TYPE MATCHES "Academic" OR LICENSE_TYPE MATCHES "Pro")
-	message(STATUS "Select a license by specifying variable LICENSE_TYPE" )
-	message(STATUS " Options are\n\t1) cmake -D LICENSE_TYPE=Professional\n\t2) cmake -D LICENSE_TYPE=Trial\n\t3) cmake -D LICENSE_TYPE=Academic" )
-	message(FATAL_ERROR "\nNow exiting...")
-ENDIF(LICENSE_TYPE MATCHES "Trial" OR LICENSE_TYPE MATCHES "Academic" OR LICENSE_TYPE MATCHES "Pro")
-
-
-# Set the correct license, only Trial version doesn't have python shell
-IF( LICENSE_TYPE MATCHES "Academic" OR LICENSE_TYPE MATCHES "Pro")
-	SET(PYTHON_QT_SUPPORT On)
-    ADD_DEFINITIONS(-DUSE_PYTHONQT=True)
-ENDIF( LICENSE_TYPE MATCHES "Academic" OR LICENSE_TYPE MATCHES "Pro")
+SET(LICENSE_TYPE "Pro")
 
 IF( NOT WIN32)
     SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fPIC")
