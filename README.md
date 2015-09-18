@@ -191,7 +191,7 @@ For Python dependencies, install the universal binaries from macport
 
 Specify the folder where is searching for python, directly in the CMakeLists.txt, find the rows:
 
-```{r, engine='bash', count_lines}
+```{r, engine='cmake', count_lines}
 	# Use the MacPort library
 	set(PYTHON_LIBRARY "/opt/local/lib/")
 	set(PYTHON_INCLUDE_DIR "/opt/local/include/python2.5/")
