@@ -38,6 +38,7 @@ When installing it, don't change the default settings for the installation, so P
 Be sure that you have the following directories in your system Path:
 
 <code>
+
 	C:\Program Files (x86)\CMake 2.8\bin;
 
 	C:\QtSDK\Desktop\Qt\4.8.4\msvc2008\bin;
@@ -49,6 +50,7 @@ Be sure that you have the following directories in your system Path:
 	C:\Program Files (x86)\Microsoft Visual Studio 9.0\Common7\IDE\;
 
 	C:\Program Files (x86)\7-Zip\;
+	
 </code>
 
 Open a command prompt and try to isse the following commands:
