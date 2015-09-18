@@ -37,18 +37,22 @@ When installing it, don't change the default settings for the installation, so P
 
 Be sure that you have the following directories in your system Path:
 
+<code>
 	C:\Program Files (x86)\CMake 2.8\bin;
 	C:\QtSDK\Desktop\Qt\4.8.4\msvc2008\bin;
 	C:\QtSDK\Desktop\Qt\4.8.4\msvc2008\lib;
 	C:\QtSDK\Desktop\Qt\4.8.4\msvc2008\include;
 	C:\Program Files (x86)\Microsoft Visual Studio 9.0\Common7\IDE\;
 	C:\Program Files (x86)\7-Zip\;
+</code>
 
 Open a command prompt and try to isse the following commands:
+<code>
 "devenv" #This should open Visual Studio
 
 "cmake" # This should run cmake
 "7z" # this should run 7zip
+</code>
 
 == AUTOMATIC BUILD INSTRUCTIONS ==
 We provide a simple "deployWin32.bat" script that allows you to deploy all the GraphInsight versions in one step. If you are lucky enough and all
@@ -62,23 +66,17 @@ Once you have installed everything, you must run CMake for the first time in ord
 Open the CMake GUI interface. Select the base folder where you've checked out the GraphInsight repository.
 The content of "Where is the source code" and "Where to build the binaries" must be the SAME.
 
-Once you have done that, press Configure. You can swith between GraphInsight version by adding the variable LICENSE_TYPE
-Press "Add Entry..." and set the "Name" to LICENSE_TYPE, "Type" to STRING and "Value" to one of following:
-	"Pro" for Professional version
-	"Trial" for Trial version
-	"Academic" for Academic version
-
 You can do the same in order to set the Debug/Release version.
 
 If you prefer to use cmake from command line, then you just have to change to the base directory of GraphInsight (for example, suppose 
 you've downloaded GraphInsight source code in C:\Users\username\Desktop\graphinsight_base_directory) and then:
-
+<code>
 	cd C:\Users\username\Desktop\graphinsight_base_directory
 	cmake -D CMAKE_BUILD_TYPE=Release -D LICENSE_TYPE=Pro .
+</code>
 
-If CMake process was good, then you have to open the solution file GraphInsight.sln in the same folder of GraphInsight and try to build the 
+If CMake process went fine, then you have to open the solution file <b>GraphInsight.sln</b> in the same folder of GraphInsight and try to build the 
 sub-project GraphInsight.
-
 
 ### WINDOWS BUILD FAQ
 If you get side-by-side configuration is incorrect it's because in the installer no runtime libraries are included.
