@@ -37,28 +37,20 @@ When installing it, don't change the default settings for the installation, so P
 
 Be sure that you have the following directories in your system Path:
 
-```python
-	C:\Program Files (x86)\CMake 2.8\bin;
-
-	C:\QtSDK\Desktop\Qt\4.8.4\msvc2008\bin;
-
-	C:\QtSDK\Desktop\Qt\4.8.4\msvc2008\lib;
-
-	C:\QtSDK\Desktop\Qt\4.8.4\msvc2008\include;
-
-	C:\Program Files (x86)\Microsoft Visual Studio 9.0\Common7\IDE\;
-
-	C:\Program Files (x86)\7-Zip\;
-
+```
+C:\Program Files (x86)\CMake 2.8\bin;
+C:\QtSDK\Desktop\Qt\4.8.4\msvc2008\bin;
+C:\QtSDK\Desktop\Qt\4.8.4\msvc2008\lib;
+C:\QtSDK\Desktop\Qt\4.8.4\msvc2008\include;
+C:\Program Files (x86)\Microsoft Visual Studio 9.0\Common7\IDE\;
+C:\Program Files (x86)\7-Zip\;
 ```
 
 Open a command prompt and try to isse the following commands:
 
-```python
+```
 "devenv" #This should open Visual Studio
-
 "cmake" # This should run cmake
-
 "7z" # this should run 7zip
 ```
 
@@ -79,15 +71,14 @@ You can do the same in order to set the Debug/Release version.
 If you prefer to use cmake from command line, then you just have to change to the base directory of GraphInsight (for example, suppose 
 you've downloaded GraphInsight source code in 
 
-```python
-	C:\Users\username\Desktop\graphinsight_base_directory)
+```{r, engine='bash', count_lines}
+C:\Users\username\Desktop\graphinsight_base_directory)
 ```
 
 and then:
-```python
-	cd C:\Users\username\Desktop\graphinsight_base_directory\build
-
-	cmake -D CMAKE_BUILD_TYPE=Release ..
+```{r, engine='bash', count_lines}
+C:\> cd C:\Users\username\Desktop\graphinsight_base_directory\build
+cmake -D CMAKE_BUILD_TYPE=Release ..
 ```
 
 If CMake process went fine, then you have to open the solution file <b>GraphInsight.sln</b> in the same folder of GraphInsight and try to build the 
@@ -97,34 +88,34 @@ sub-project GraphInsight.
 If you get side-by-side configuration is incorrect it's because in the installer no runtime libraries are included.
 So you have to manually check that the following files are redistributed with the pack:
 
-```python
-	msvcm90.dll
-	msvcr90.dll
-	msvcp90.dll
-	vcomp90.dll
+```
+msvcm90.dll
+msvcr90.dll
+msvcp90.dll
+vcomp90.dll
 ```
 
 If you have problem when compiling with OpenMP active, you have to be sure that the correct path of the OPENMP msvc library is correct, because I've included it brute-force
 because of a bug in CMake (currently still a bug in version 2.8, this is discussed in src/graphinsight/CMakeLists.txt)
 If you are using Visual Studio 2010 the files are instead:
 
-```python
-	msvcm100.dll
-	msvcr100.dll
-	msvcp100.dll
-	vcomp100.dll
+```
+msvcm100.dll
+msvcr100.dll
+msvcp100.dll
+vcomp100.dll
 ```
 
 If you still experience problems of this kind, try to disable the OpenMP support from the main CMakeLists.txt, by commenting the following lines:
 
-```python
-	IF(NOT APPLE)
-	    include(FindOpenMP)
-	    IF(OPENMP_FOUND)
-		SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${OpenMP_CXX_FLAGS}")
-		SET(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} ${OpenMP_EXE_LINKER_FLAGS}")
-	    ENDIF(OPENMP_FOUND)
-	ENDIF(NOT APPLE)
+```{r, engine='cmake', count_lines}
+IF(NOT APPLE)
+    include(FindOpenMP)
+    IF(OPENMP_FOUND)
+	SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${OpenMP_CXX_FLAGS}")
+	SET(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} ${OpenMP_EXE_LINKER_FLAGS}")
+    ENDIF(OPENMP_FOUND)
+ENDIF(NOT APPLE)
 ```
 
 We didn't enable OpenMP on Apple explicitly because of a bug of Qt when is spawning a layout thread.
@@ -136,10 +127,10 @@ In order to correctly build the packages for 64 bit linux, please download the l
 
 Here we provide instructions to build on debian-based distributions (I'm using Ubuntu 14.04 x86_64)
 
-```python
-	sudo apt-get update
-	sudo apt-get upgrade
-	sudo apt-get install libglew1.9 libglew1.9-dev libglu1-mesa libglu1-mesa-dev libgl1-mesa-glx libgl1-mesa-dev mesa-common-dev libxi-dev libxmu-dev libxmuu-dev qt4-dev-tools build-essential rpm
+```{r, engine='bash', count_lines}
+$> sudo apt-get update
+$> sudo apt-get upgrade
+$> sudo apt-get install libglew1.9 libglew1.9-dev libglu1-mesa libglu1-mesa-dev libgl1-mesa-glx libgl1-mesa-dev mesa-common-dev libxi-dev libxmu-dev libxmuu-dev qt4-dev-tools build-essential rpm
 ```
 
 ---
@@ -155,17 +146,19 @@ In order to build GraphInsight for OSX you need the following programs:
 	* http://download.qt-project.org/official_releases/qt/4.8/4.8.4/qt-mac-opensource-4.8.4.dmg
 	* http://download.qt-project.org/official_releases/qtcreator/2.7/2.7.1/qt-creator-mac-opensource-2.7.1.dmg
 
-* Check your current version of Python
-	$> python --version 
+* Check your current version of Python:
+```{r, engine='bash', count_lines}
+$> python --version 
+```
 
 First of all set the environment variable:
 
 ```{r, engine='bash', count_lines}
-	$> export MAC_OSX_DEPLOYMENT_TARGET=10.5
-	$> git pull
-	$> cmake -DCMAKE_BUILD_TYPE=Release -DLICENSE_TYPE=Pro .
-	$> make GraphInsight
-	$> sudo macdeployqt build/GraphInsight.app
+$> export MAC_OSX_DEPLOYMENT_TARGET=10.5
+$> git pull
+$> cmake -DCMAKE_BUILD_TYPE=Release -DLICENSE_TYPE=Pro .
+$> make GraphInsight
+$> sudo macdeployqt build/GraphInsight.app
 ```
 
 Ensure that the following folder is inserted into the Bundle:
@@ -174,27 +167,27 @@ GraphInsight.app/Contents/Frameworks/Python.framework
 Only if you have dependencies problems, you can run the following commands:
 
 ```{r, engine='bash', count_lines}
-	install_name_tool -change /opt/local/Library/Frameworks/Python.framework/Versions/2.7/Python /Library/Frameworks/Python.framework/Versions/2.5/Python GraphInsight.app/Contents/MacOS/GraphInsight
+install_name_tool -change /opt/local/Library/Frameworks/Python.framework/Versions/2.7/Python /Library/Frameworks/Python.framework/Versions/2.5/Python GraphInsight.app/Contents/MacOS/GraphInsight
 ```
 
 You should also indicate which Python library it must be added in the bundle. Avoid the MacPort library, because is not build for multiarchitecture (both i386 and x86_64)
 
 ```{r, engine='bash', count_lines}
-	$> export DYLD_LIBRARY_PATH e cercare di evitare /opt/local/lib/libpython2.7.dylib
+$> export DYLD_LIBRARY_PATH e cercare di evitare /opt/local/lib/libpython2.7.dylib
 ```
 
 For Python dependencies, install the universal binaries from macport
 
 ```{r, engine='bash', count_lines}
-	$> sudo port install python25 +universal python26 +universal python27 +universal
+$> sudo port install python25 +universal python26 +universal python27 +universal
 ```
 
 Specify the folder where is searching for python, directly in the CMakeLists.txt, find the rows:
 
 ```{r, engine='cmake', count_lines}
-	# Use the MacPort library
-	set(PYTHON_LIBRARY "/opt/local/lib/")
-	set(PYTHON_INCLUDE_DIR "/opt/local/include/python2.5/")
+# Use the MacPort library
+set(PYTHON_LIBRARY "/opt/local/lib/")
+set(PYTHON_INCLUDE_DIR "/opt/local/include/python2.5/")
 ```
 
 In order for everything to run smoothly, everything must match (headers and binaries of python must be the very same version).
