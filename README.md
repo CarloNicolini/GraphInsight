@@ -139,7 +139,6 @@ Here we provide instructions to build on debian-based distributions (I'm using U
 ```python
 	sudo apt-get update
 	sudo apt-get upgrade
-
 	sudo apt-get install libglew1.9 libglew1.9-dev libglu1-mesa libglu1-mesa-dev libgl1-mesa-glx libgl1-mesa-dev mesa-common-dev libxi-dev libxmu-dev libxmuu-dev qt4-dev-tools build-essential rpm
 ```
 
@@ -161,15 +160,11 @@ In order to build GraphInsight for OSX you need the following programs:
 
 First of all set the environment variable:
 
-```python
+```{r, engine='bash', count_lines}
 	$> export MAC_OSX_DEPLOYMENT_TARGET=10.5
-
 	$> git pull
-	
 	$> cmake -DCMAKE_BUILD_TYPE=Release -DLICENSE_TYPE=Pro .
-	
 	$> make GraphInsight
-	
 	$> sudo macdeployqt build/GraphInsight.app
 ```
 
@@ -178,22 +173,25 @@ GraphInsight.app/Contents/Frameworks/Python.framework
 
 Only if you have dependencies problems, you can run the following commands:
 
+```{r, engine='bash', count_lines}
 	install_name_tool -change /opt/local/Library/Frameworks/Python.framework/Versions/2.7/Python /Library/Frameworks/Python.framework/Versions/2.5/Python GraphInsight.app/Contents/MacOS/GraphInsight
+```
 
 You should also indicate which Python library it must be added in the bundle. Avoid the MacPort library, because is not build for multiarchitecture (both i386 and x86_64)
 
-```python
+```{r, engine='bash', count_lines}
 	$> export DYLD_LIBRARY_PATH e cercare di evitare /opt/local/lib/libpython2.7.dylib
 ```
+
 For Python dependencies, install the universal binaries from macport
 
-```python
+```{r, engine='bash', count_lines}
 	$> sudo port install python25 +universal python26 +universal python27 +universal
 ```
 
 Specify the folder where is searching for python, directly in the CMakeLists.txt, find the rows:
 
-```python
+```{r, engine='bash', count_lines}
 	# Use the MacPort library
 	set(PYTHON_LIBRARY "/opt/local/lib/")
 	set(PYTHON_INCLUDE_DIR "/opt/local/include/python2.5/")
