@@ -162,11 +162,11 @@ In order to build GraphInsight for OSX you need the following programs:
 First of all set the environment variable:
 
 <code>
-	$> export MAC_OSX_DEPLOYMENT_TARGET=10.5
-	$> git pull
-	$> cmake -DCMAKE_BUILD_TYPE=Release -DLICENSE_TYPE=Pro .
-	$> make GraphInsight
-	$> sudo macdeployqt build/GraphInsight.app
+	$> export MAC_OSX_DEPLOYMENT_TARGET=10.5 <br>
+	$> git pull <br>
+	$> cmake -DCMAKE_BUILD_TYPE=Release -DLICENSE_TYPE=Pro . <br>
+	$> make GraphInsight <br>
+	$> sudo macdeployqt build/GraphInsight.app <br>
 </code>
 
 Ensure that the following folder is inserted into the Bundle:
