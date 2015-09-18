@@ -6,7 +6,7 @@ GraphInsight is a visualization software that lets you explore graph data throug
 Building GraphInsight for Windows is rather cumbersome and you need to pay some attention to details. In particular you must be sure that the Qt libraries are the ones built for your same compiler and, in order to package all the project and generate the setup.exe you need other external programs, such as 7-zip and NSIS.
 
 * For code checkout
-1) Install GIT for Windows. We suggest to use Tortoise GIT as git user-interface: 
+1. Install GIT for Windows. We suggest to use Tortoise GIT as git user-interface: 
 	http://code.google.com/p/tortoisegit/
 Follow the installation instructions on TortoiseGIT website for further information on how make git available on 
 your Windows computer.
@@ -14,26 +14,16 @@ your Windows computer.
 ### For building:
 Install as follows in this order:
 
-1) Install Microsoft Visual Studio 2008 or Microsoft Visual Studio 2010. You can build GraphInsight also with free version of 
+1. Install Microsoft Visual Studio 2008 or Microsoft Visual Studio 2010. You can build GraphInsight also with free version of 
 the Microsoft Visual Studio, namely "Visual Studio Express 2008" or "Visual Studio Express 2010". Build process is not tested with Visual Studio 2012 or newer. 
-
-2) Install CMake for Windows, the latest version tested is the 2.8.11
-	http://www.cmake.org/
-
-3) Install Qt 4.8.4 SDK. It is very important that the binaries of Qt 4.8.4 SDK **MATCH** your current version 
-of Visual Studio.
-	http://download.qt-project.org/official_releases/qt/4.8/4.8.4/qt-win-opensource-4.8.4-vs2008.exe
-
-4) Install the latest Python 2.7.x for Windows. We currently don't support Python 3.x
-	http://python.org/ftp/python/2.7.5/python-2.7.5.msi
-When installing it, don't change the default settings for the installation, so Python will be under "C:/Python27"
-
+2. Install CMake for Windows, the latest version tested is the 3.2 http://www.cmake.org/
+3. Install Qt 4.8.4 SDK. It is very important that the binaries of Qt 4.8.4 SDK **MATCH** your current version of Visual Studio.
+http://download.qt-project.org/official_releases/qt/4.8/4.8.4/qt-win-opensource-4.8.4-vs2008.exe
+4. Install the latest Python 2.7.x for Windows. We currently don't support Python 3.x http://python.org/ftp/python/2.7.5/python-2.7.5.msi
+When installing it, don't change the default settings for the installation, so Python will be under `C:/Python27`
 * For packaging
-5) Install NSIS (a sfor package creation)
-	http://nsis.sourceforge.net/Main_Page
-
-6) Install 7zip for Windows (for package creation)
-	http://www.7-zip.org/
+5. Install NSIS (a sfor package creation) http://nsis.sourceforge.net/Main_Page
+6. Install 7zip for Windows (for package creation) http://www.7-zip.org/
 
 Be sure that you have the following directories in your system Path:
 
