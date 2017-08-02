@@ -1,10 +1,5 @@
 # GraphInsight
 GraphInsight is a visualization software that lets you explore graph data through high quality interactive representations.
-## Donations
-If you found GraphInsight helpful feel free to donate:
-    
-    BTC
-    1KQaToocfaVCVBKw8ZMbM3ceEQPSZiC1mU
 
 ## How to build
 ### WINDOWS
